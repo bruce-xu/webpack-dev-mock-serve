@@ -1,0 +1,24 @@
+{
+  "name": "webpack-dev-mock-serve",
+  "version": "0.1.0",
+  "description": "A mock server for webpack-dev-server",
+  "main": "lib/index.js",
+  "files": [
+    "./README.md",
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruce-xu/webpack-dev-mock-serve.git"
+  },
+  "keywords": ["mock", "mock server", "webpack", "webpack-dev-server"],
+  "author": "Bruce Xu <brucexyj@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bruce-xu/webpack-dev-mock-serve/issues"
+  },
+  "homepage": "https://github.com/bruce-xu/webpack-dev-mock-serve#readme"
+}

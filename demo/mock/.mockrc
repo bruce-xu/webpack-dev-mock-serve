@@ -1,0 +1,8 @@
+{
+  "enable": true,
+  "rules": {
+    "/book/list": true,
+    "/book/detail/$id": true,
+    "/book/$category/$name": true
+  }
+}

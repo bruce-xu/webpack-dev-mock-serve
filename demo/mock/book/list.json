@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "category": "story",
+    "name": "红楼梦"
+  },
+  {
+    "id": 2,
+    "category": "story",
+    "name": "西游记"
+  }
+]

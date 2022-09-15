@@ -1,17 +1,17 @@
 # webpack-mock-server
 
 
-English | [中文](./README-cn.md)
+[English](./README.md) | 中文
 
-##  Features
+##  特性
 
-- Automatically read the files under mock (the directory name can be configured), and generate the mapping relationship between mock API paths and files
-- Support json (recommended for static data), js (recommended for dynamic data) file formats
-- Supports dynamic addition, deletion, and modification of mock files at runtime after startup, without restarting the server
-- The configuration file of the mock API will be automatically generated at startup. You can modify the `enable` field to enable/disable the mock globally, or enable/disable the mock API individually
-- Supports the inclusion of variables in the path. It is agreed that the part of the path starting with `$` is a variable, and the variable name after `$` can be obtained through `req.params` in js file
+- 自动读取 mock（目录名可配置）下的文件，生成 mock API 路径与文件的映射关系
+- 支持 json（建议静态数据使用）、js（建议动态数据使用）文件格式
+- 支持项目启动后的运行时动态增、删、改 mock 文件，无需重启服务器
+- 启动时会自动生成 mock 接口的配置文件，可修改里面的`enable`字段全局开启/关闭 mock，也可单独开启/关闭某个接口的 mock
+- 支持路径中包含变量，约定以`$`开头的路径部分为变量，`$`后为变量名，变量名可在 js 中通过 `req.params` 获取到
 
-## Install
+## 安装
 
 ```js
 // npm
@@ -20,7 +20,7 @@ npm install webpack-dev-mock-serve -D
 yarn add webpack-dev-mock-serve -D
 ```
 
-## Usage
+## 使用
 
 ```js
 const mockServer = require('webpack-dev-mock-serve');
@@ -39,18 +39,18 @@ module.exports = {
 }
 ```
 
-## Options
+## 配置
 
 | Param                 | Type                       | Default             | Description                                                                                                                                                                                                                      |
 | --------------------- | -------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| devServer                 | Object     |  | webpack-dev-server instance |
-| mockDir                  | String                     | mock                | Mock files root path |
-| watch               | Boolean                    | true               | Whether to listen the mock directory |
-| switch          | Boolean                    | true               | Whether can switch on/off mock API |
+| devServer                 | Object     |  | webpack-dev-server 实例 |
+| mockDir                  | String                     | mock                | Mock 文件路径 |
+| watch               | Boolean                    | true               | 是否监听 mock 文件变化，若为 true 则增、删、改 mock 文件后可实时生效，无需重启服务 |
+| switch          | Boolean                    | true               | 是否可控制启用/禁用 mock 接口，若为 true 则在 mock 目录下生成配置文件 .mockrc，修改此文件可全局或单个控制 mock 接口的启用/禁用 |
 
-## Demo
+## 示例
 
-Directory structure
+目录结构如下：
 
 ```
 ┌── webpack.config.js  
@@ -64,7 +64,7 @@ Directory structure
 
 ```
 
-`webpack.config.js` configation
+`webpack.config.js` 配置
 ```js
 const mockServer = require('webpack-dev-mock-serve');
 
@@ -115,7 +115,7 @@ module.exports = (req, res) => {
 }
 ```
 
-If the options `switch` is `true`，then a configation file `.mockrc` will be generated under `mock`，you can edit the file to control switch on/off all or single mock API. The configuration file format is as follows:
+若配置`switch`为`true`，则启动时自动在`mock`目录下生成配置文件`.mockrc`，可编辑此文件全局或单个控制 mock API 的启用/禁用。配置文件格式如下：
 ```json
 // mock/.mockrc
 {
