@@ -1,6 +1,6 @@
 {
   "name": "webpack-dev-mock-serve",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A mock server for webpack-dev-server",
   "main": "lib/index.js",
   "files": [

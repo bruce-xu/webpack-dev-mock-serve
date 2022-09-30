@@ -1,4 +1,4 @@
-# webpack-mock-server
+# webpack-dev-mock-serve
 
 
 [English](./README.md) | 中文
